@@ -9,16 +9,25 @@
       Авторизация
     </title>
     <style>
-      #auth {
+      #auth-container {
         width: 100vw;
         height: 100vh;
-        background-color: aliceblue;
-        border-radius: .1rem;
         display: flex;
         flex-direction: column;
-        gap: .5rem;
+        background-color: aliceblue;
         justify-content: center;
         align-items: center;
+      }
+      #auth {
+        display: flex;
+        flex-direction: column;
+        background-color: aliceblue;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background-color: antiquewhite;
+        border-radius: .4rem;
+        filter: drop-shadow(0 0 .8rem #00000045);
       }
       :root {
         background-color: white;
@@ -26,17 +35,19 @@
     </style>
   </head>
   <body>
-    <div id="auth" class="container-fluid">
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label" id="username">Логин</label>
-        <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="loginHelp">
-        <div id="loginHelp" class="form-text">Введите логин.</div>
+    <div id="auth-container" class="container-fluid">
+      <div id="auth">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" id="username">Логин</label>
+          <input type="text" class="form-control" id="exampleInputUsername" aria-describedby="loginHelp">
+          <div id="loginHelp" class="form-text">Введите логин.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label" id="password">Пароль</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button class="btn btn-primary" onclick="handle()">Войти</button>
       </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label" id="password">Пароль</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-      </div>
-      <button class="btn btn-primary" onclick="handle()">Войти</button>
     </div>
     <script>
       async function handle() {
