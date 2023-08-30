@@ -93,6 +93,7 @@
         font-weight: bold;
       }
 
+      /* for mobile */
       @media (width < 640px) {
         #auth {
           width: 100%;
@@ -152,18 +153,22 @@
     </div>
     <script>
       async function handle() {
+        // get fields values
         let username = document.getElementById("exampleInputUsername").value;
         let password = document.getElementById("exampleInputPassword").value;
+        // check for non-filled
         if (username === '' || password === '') {
           alert("Вы должны ввести логин и пароль");
           return;
         }
+        // try to log in
         const result = await fetch(
           `/auth?username=${username}&password=${password}`,
           {
             method: 'POST'
           }
         )
+        // receive data
         const response = await result.json();
         if (response.response === 'success') {
           document.location.replace('/profile');
