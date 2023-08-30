@@ -9,11 +9,16 @@
       Авторизация
     </title>
     <style>
-      #auth {
+      .main {
         width: 100vw;
         height: 100vh;
         background-color: aliceblue;
         border-radius: .1rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
       }
       :root {
         background-color: white;
@@ -21,8 +26,10 @@
     </style>
   </head>
   <body>
-    <div id="auth" class="container-fluid">
-      Тут должен был быть Ваш профиль 😳
+    <div class="main container-fluid">
+      <p>
+        Тут должен был быть Ваш профиль 😳
+      </p>
       <button class="btn btn-primary" onclick="handle()">
         Выйти
       </button>

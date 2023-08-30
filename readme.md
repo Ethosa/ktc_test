@@ -4,5 +4,5 @@
 
 ```bash
 pip install flask
-python main.py
+python3 main.py
 ```
