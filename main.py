@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, url_for
 
 
 app = Flask(__name__)
@@ -28,7 +28,7 @@ def auth():
     username = request.args.get('username')
     password = request.args.get('password')
     if username != '' and password != '':
-      response = jsonify({'response': 'success'})
+      response = jsonify({'response': 'success', 'href': url_for('profile', _external=True)})
     else:
       response = jsonify({'response': 'failure'})
     response.headers.add("Access-Control-Allow-Origin", "*")
