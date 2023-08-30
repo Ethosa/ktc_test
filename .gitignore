@@ -1,0 +1,5 @@
+# cached results
+__pycache__/
+*.so
+*.bin
+*.exe
