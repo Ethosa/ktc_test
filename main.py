@@ -30,7 +30,7 @@ def auth():
     if username == 'admin' and password == 'admin':
       response = jsonify({'response': 'success'})
     else:
-      response = jsonify({'response': 'failure'})
+      response = jsonify({'response': 'failure', 'message': 'Неправильный логин или пароль'})
     response.headers.add("Access-Control-Allow-Origin", "*")
     response.headers.add("Access-Control-Allow-Headers", "*")
     response.headers.add("Access-Control-Allow-Methods", "*")
