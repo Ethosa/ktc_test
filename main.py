@@ -27,8 +27,8 @@ def auth():
     """
     username = request.args.get('username')
     password = request.args.get('password')
-    if username != '' and password != '':
-      response = jsonify({'response': 'success', 'href': url_for('profile', _external=True)})
+    if username == 'admin' and password == 'admin':
+      response = jsonify({'response': 'success'})
     else:
       response = jsonify({'response': 'failure'})
     response.headers.add("Access-Control-Allow-Origin", "*")
