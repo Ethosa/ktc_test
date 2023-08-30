@@ -19,6 +19,34 @@
           opacity: 1;
         }
       }
+      @keyframes show-auth {
+        0% {
+          transform: translateY(-2rem);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes show-auth-btn {
+        0% {
+          transform: translateY(2rem);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes show-auth-form {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
       #auth-container {
         width: 100vw;
         height: 100vh;
@@ -44,10 +72,6 @@
       }
       #pswdHelp, #loginHelp {
         opacity: .5;
-      }
-      p {
-        font-size: x-large;
-        font-weight: bold;
       }
       #username, #password {
         font-size: x-large;
@@ -79,6 +103,7 @@
           animation: none;
           padding-top: 4rem;
           padding-bottom: 1rem;
+          animation: show-auth-form .5s ease-in-out;
         }
         #username, #password {
           font-size: xx-large;
@@ -94,10 +119,12 @@
         .btn {
           width: 100% !important;
           font-size: x-large;
+          animation: show-auth-btn .5s ease-in-out;
         }
         p {
           font-size: xx-large;
           font-weight: bold;
+          animation: show-auth .5s ease-in-out;
         }
       }
     </style>
