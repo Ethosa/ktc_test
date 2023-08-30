@@ -11,7 +11,7 @@
     <style>
       @keyframes show-surface {
         0% {
-          transform: translateY(-2rem);
+          transform: translateY(2rem);
           opacity: 0;
         }
         100% {
@@ -28,11 +28,11 @@
         flex-direction: column;
         gap: .5rem;
         padding-top: 15rem;
+        overflow: hidden;
       }
       #profile {
         display: flex;
         flex-direction: column;
-        background-color: aliceblue;
         justify-content: start;
         align-items: center;
         width: 100%;
@@ -59,9 +59,6 @@
         margin-top: -64px;
         font-size: x-large;
         font-weight: bold;
-      }
-      :root {
-        background-color: white;
       }
 
       @media (width < 640px) {
